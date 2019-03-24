@@ -1,0 +1,53 @@
+//Learning JavaScript & Having Fun
+// Successfully Understood on RUN. little bit tricky
+// Creating 2 Objects.
+let myYoutubeVideoOne = {   // myYoutubeVideoOne : this is a OBJECT
+    VideoLength: 15,
+    VideoTitle: "Learn Javascript", // And all these are PROPERTIES.
+    VideoDescription: "This is the video description",
+    VideoCreator: "Rahul More is the video creator",
+
+}
+
+let myYoutubeVideoTwo = {
+    VideoLength: 20,
+    VideoTitle: "Learn React Native",
+    VideoDescription: "This is new Video Descripton",
+    VideoCreator: "The creator of this video is Rahul More"
+}
+
+//Creating function to access the object/properties.
+let changeVideoLength = function(myObject){
+    return{
+        formatOne: `the title of the video is : ${myObject.VideoTitle} & the length of the video is : ${myObject.VideoLength+2}`,
+        formatTwo: `the title of the video is : ${myObject.VideoTitle} & the length of the video is : ${myObject.VideoLength+1}`
+
+    }
+
+}
+
+let changeVideoTitle = function(myObject){
+    return{
+        formatOne: `The previous title of the video is : ${myObject.VideoTitle} & new Title is : ${myObject.VideoTitle="MKBHD"}`,
+        formatTwo: `The previous title of the video is : ${myObject.VideoTitle} & new Title is : ${myObject.VideoTitle="Unbox Theorpy"}`
+    }
+}
+
+let changeVideoDescription = function(MKBHD){
+    return{
+        formatOne: `The Previous Description of the video is : ${MKBHD.VideoDescription} & new Description is : ${MKBHD.VideoDescription="This is the NEW DESCRIPTION of FormatOne"}`,
+        formatTwo: `The Previous Description of the video is : ${MKBHD.VideoDescription} & new Description is : ${MKBHD.VideoDescription="This is the NEW video DESCRIPTION of FormatTwo"} `
+    }
+}
+
+// let b = changeVideoTitle(myYoutubeVideoOne)
+// console.log(b.formatOne);
+
+// let a = changeVideoLength(myYoutubeVideoOne);
+// console.log(a.formatTwo);
+
+let c = changeVideoDescription(myYoutubeVideoOne);
+console.log(c.formatOne);
+
+
+
