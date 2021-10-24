@@ -1,0 +1,48 @@
+1) What are the different data types present in javascript?
+===> Primitive types & Non-primitive types
+    i) Primitive types: 7 Types
+        String, Number , BigInt , Boolean ,Undefined , Null, Symbol.
+    ii) Non-primitive types : 1 as of now
+        Primitive data types can store only a single value. To store multiple and complex values, non-primitive data types are used.
+        Object.
+NOTE: if(dataType !== primitive) {  then it is of Object type in javascript }
+
+2) Explain Hoisting in javascript.
+    i) Accessing variables & functions before declaring is known as Hoisting in JS.
+    ii) Hoisting is a default behaviour of javascript where all the variable and function declarations are moved on top.
+3) How to avoid Hoisting?
+===> i) use strict :- To avoid hoisting, you can run javascript in strict mode by using “use strict” on top of the code: 
+
+4) Implicit Type Coercion in javascript.
+===> i)  is automatic conversion of value from one data type to another.
+    ii) String coercion takes place while using the ‘ + ‘ operator. When a number is added to a string, the number type is always converted to the string type.
+    iii) `+` :  Number Converted to string
+    iv) `-` : String Converted to Number
+    v) Boolean Coercion (V IMP ): Conditional Statements:-   """" False Values are: -0, 0n, -0, “”, null, undefined and NaN """" 
+    vi) All other are true values.
+    vii) The ‘==’ operator, first converts both the operands to the same type and then compares them.
+
+5) Is javascript a statically typed or a dynamically typed ( loosely ) language?
+    i) JavaScript is a dynamically ( loosely ) typed language.
+    ii) dynamically typed language : 
+            1) Variables have no types
+            2) Values have types
+            3) Variables change dynamically!
+    iii) Statically typed language: 
+            1) Varibles have types
+            2) Variables can't change types!
+
+6) What is NaN property in JavaScript?
+    1) isNaN() function converts the given value to a Number type, and then equates to NaN.
+    2) Means it first converts parameter to `Number type` AND then checks if the parameter is `NaN`
+    3) NaN checks if the parament is `Not a Number`
+    4) If it is `Not a number` return `true`
+    5) If it is `Number` return `false`
+    6) Confusion because statement `NaN: Not A Number`
+
+    isNaN("Hello")  // Returns true
+    isNaN(345)   // Returns false
+    isNaN('1')  // Returns false, since '1' is converted to Number type which results in 0 ( a number) 
+    isNaN(true) // Returns false, since true converted to Number type results in 1 ( a number)
+    isNaN(false) // Returns false
+    isNaN(undefined) // Returns true
