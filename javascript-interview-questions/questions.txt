@@ -15,8 +15,9 @@ NOTE: if(dataType !== primitive) {  then it is of Object type in javascript }
 
 4) Implicit Type Coercion in javascript.
 ===> i)  is automatic conversion of value from one data type to another.
-    ii) String coercion takes place while using the ‘ + ‘ operator. When a number is added to a string, the number type is always converted to the string type.
-    iii) `+` :  Number Converted to string
+    ii) String coercion takes place while using the ‘ + ‘ operator. When a number is added to a string, 
+        the number type is always converted to the string type.
+    iii) `+` :  Number Converted to string. ( Number added to str )
     iv) `-` : String Converted to Number
     v) Boolean Coercion (V IMP ): Conditional Statements:-   """" False Values are: -0, 0n, -0, “”, null, undefined and NaN """" 
     vi) All other are true values.
@@ -24,6 +25,7 @@ NOTE: if(dataType !== primitive) {  then it is of Object type in javascript }
 
 5) Is javascript a statically typed or a dynamically typed ( loosely ) language?
     i) JavaScript is a dynamically ( loosely ) typed language.
+
     ii) dynamically typed language : 
             1) Variables have no types
             2) Values have types
@@ -46,3 +48,72 @@ NOTE: if(dataType !== primitive) {  then it is of Object type in javascript }
     isNaN(true) // Returns false, since true converted to Number type results in 1 ( a number)
     isNaN(false) // Returns false
     isNaN(undefined) // Returns true
+
+7) Explain passed by value and passed by reference.
+    1) In primitive data types We pass by value. (  )
+        var y = 234; // #8454
+        var z = y; // #5411
+
+        Y & Z Points to diff addresses!. Now if you change value of `Y` = `23` still `Z` will point to 234 (  allocates a new space in the memory and returns the address  )
+        
+    2) In Non-primitive data types we pass by reference. ( 2 assigned Object points to same address if ( Obj2 = Obj ) )
+
+8) What is an Immediately Invoked Function in JavaScript? ( IIFE ).
+    An Immediately Invoked Function ( known as IIFE and pronounced as IIFY) is a function that runs as soon as it is defined.
+
+9) Explain Higher Order Functions in javascript.
+    1) A function which takes another function as an argument & returns a function is know as Higher Order Function!
+
+10) Explain “this” keyword.
+    ===> The “this” keyword refers to the object that the function is a property of.
+        ii) Since the function is invoked in the global context, the function is a property of the global object.
+        iii) It depends on where & how you call the function!
+
+11) Differences between declaring variables using var, let and const.
+    ===> !) Main diff is of scope.
+        ii) Var has a global scope out side a function. inside a functions its local. Let & Const has local or block scope.
+        iii) Var & let can be reassgined. Const cannot be.
+
+12) What is the rest parameter and spread operator?
+    ===> Rest
+    ===> 1) Both intruduced in es6
+         2) ...rest :- rest parameter can be used to pass any number of argument to the function.
+         3) argument will be converted to array. 
+         4) function isValidUser(arg1, arg2, ...rest){
+                return rest[1];
+           }
+         5) Rest parameter should always be used at the last parameter of a function: like shown above
+    ===> Spread operator
+        1) Syntax is same for both ...spread & ...rest
+        2) spread operator is used to spread an array, and object literals.\
+        3) Merge object & array
+
+    ===>  Key Diff
+    1) Rest parameter is used to take a variable number of arguments and turns into an array while the spread operator takes an array or an object and spreads it
+    2) Rest parameter is used in function declaration whereas the spread operator is used in function calls.
+
+13) What is the use of promises in javascript?
+    1) Promises are used to handle asynchronous operations in javascript. ( like server requests )
+    2) before promises, call backs were used to handle promises.
+    3) But due to limited functionality of callback, using multiple callbacks to handle asynchronous code can lead to unmanageable code.
+
+14) What is Object Destructuring?
+    1) is a new way to extract elements from an object or an array.
+    2) before es6 ===> Object Destructuring
+        const classStrength = classDetails.strength;
+        const classBenches = classDetails.benches;
+
+    3) const {strength, benches, blackBoard} = classDetails;
+
+    4) before es6 ===> Array Destructuring
+        const arr = [1, 2, 3, 4];
+        const first = arr[0];
+        const second = arr[1];
+    
+    5) After es6  ===> Array Destructuring
+    const arr = [1, 2, 3, 4];
+    const [first,second,third,fourth] = arr;
+
+
+
+
