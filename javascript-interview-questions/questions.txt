@@ -113,7 +113,23 @@ NOTE: if(dataType !== primitive) {  then it is of Object type in javascript }
     5) After es6  ===> Array Destructuring
     const arr = [1, 2, 3, 4];
     const [first,second,third,fourth] = arr;
+15) PreIncrement Vs PostIncrement
 
+    PreIncrement: 
 
+    let counter = 0
+    document.getElementById('clickMe').addEventListener('click', function(){
+        console.log('Button Clicked!', ++counter) // 1
+    })
 
+    PreIncrement:  First Increment then store / update / log
 
+    PostIncrement
+
+    let counter = 0
+    document.getElementById('clickMe').addEventListener('click', function(){
+        console.log('Button Clicked!', counter++) // 0
+        console.log('counter ===> ', counter) // 1
+    })
+
+    PostIncrement: log old value --> Then Increment ---> then log new value 
