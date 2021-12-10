@@ -20,7 +20,7 @@ function x() {
     }
 
     a = 100
-    
+
     return y
 }
 
